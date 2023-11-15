@@ -159,7 +159,7 @@ open class MessagesCollectionViewFlowLayout: UICollectionViewFlowLayout {
         .contactCellSizeCalculator(for: message, at: indexPath, in: messagesCollectionView) ?? contactMessageSizeCalculator
     case .linkPreview:
       return linkPreviewMessageSizeCalculator
-    case .custom:
+    case .custom, .header, .closeChat, .pdfFile, .timeStamp, .multiPhoto, .multiPhotoTwo, .multiPhotoFour, .multiPhotoFive, .multiPhotoWithText, .photoWithText:
       return messagesLayoutDelegate.customCellSizeCalculator(for: message, at: indexPath, in: messagesCollectionView)
     }
   }

@@ -63,6 +63,17 @@ public enum MessageKind {
   ///   - MessagesLayoutDelegate: customCellSizeCalculator(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> CellSizeCalculator
   case custom(Any?)
 
+    case header(String?)
+    case closeChat(String?)
+    case timeStamp(String?)
+    case pdfFile(URL?, Int?)
+    case multiPhoto([MediaItem]?, Int?)
+    case multiPhotoFive([MediaItem]?, Int?)
+    case multiPhotoFour([MediaItem]?, Int?)
+    case multiPhotoTwo([MediaItem]?, Int?)
+    case multiPhotoWithText([MediaItem]?, String?, Int?)
+    case photoWithText(MediaItem?, String?, Int?, Bool?)
+
   // MARK: - Not supported yet
 
 //    case system(String)
